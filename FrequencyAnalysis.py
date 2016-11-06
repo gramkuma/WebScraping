@@ -60,14 +60,15 @@ text = '\n'.join(line for line in lines)
 filteredText = filter(text)                       #Filter text for punct,nums and normalize words to lower case
 
 synSincerity = syn("sincerity",2.26)
+#synSincerity = nltk.synSincerity()
 synRugged = (syn("ruggedness",2.26))
 synSophistic = (syn("sophistication",2.26))     #Getting every synonym possible.ever.
 synCompetence = (syn("competence",2.26))
 synExcite = (syn("excitement",2.26))
 
 
-
-#filteredText.dispersion_plot([synSincerity,synRugged, synSophistic, synCompetence,synExcite])
+#for i in synSincerity:
+    #filteredText.dispersion_plot(i)
 
 #print allSyn
 
