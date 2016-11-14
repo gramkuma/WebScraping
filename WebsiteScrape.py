@@ -8,6 +8,8 @@ from nltk.corpus import stopwords
 from nltk.corpus import inaugural
 from nltk.tokenize import PunktSentenceTokenizer
 
+#Extracts all readable text from a website, trains the Punkt Sentence Tokenizer and tags the POS of each word. It then extracts the adjectives.
+
 # -*- coding: utf-8 -*-
 
 # def filter(text):
@@ -55,5 +57,21 @@ trainText = inaugural.raw("2009-Obama.txt")                         #Training th
 custom_sent_tokenizer = PunktSentenceTokenizer(trainText)
 tokenized = custom_sent_tokenizer.tokenize(text)
 
-posContent = process_content(tokenized)
-print posContent
+posContent = process_content(tokenized)         #Tagged content
+
+adjectives = []               #Pulling out the adjectives
+
+#JJ = Adjectives
+#NN = Nouns
+#NNS = Plural nouns
+#VB = Verb
+
+for i in posContent:
+	if i[1] == "JJ":
+		print i
+		adjectives.append(i[0])
+	for j in i:
+		if j[1] == "JJ":
+			print j	
+			adjectives.append(j[0])
+print adjectives
