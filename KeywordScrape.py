@@ -10,10 +10,10 @@ url = raw_input("Enter a website url to scrape:")
 r = requests.get("http://"+url)
 website = r.text
 
-soup = BeautifulSoup(website,"lxml")
+soup = BeautifulSoup(website,"lxml")      #Make it into a beautiful soup object
 #print soup.prettify()
 
-desc = ""
+desc = ""                      # Create string variables to store tags in
 keywords=""
 title =""
 h1 = ""
@@ -21,7 +21,7 @@ for meta in soup.findAll("meta"):
     metaname = meta.get('name', '').lower()  #Finds attribute title and lowercases for case sensitivity
     metaprop = meta.get('property', '').lower()
 
-    if 'description' == metaname or metaprop.find("description")>0:
+    if 'description' == metaname or metaprop.find("description")>0:   # Finds the meta names with description
       desc = meta['content'].strip().encode("utf8")
       #print desc
 
@@ -29,8 +29,8 @@ for meta in soup.findAll("meta"):
       keywords = meta['content'].strip().encode("utf8")
       #print keywords
 
-title = soup.findAll("title")     #Other Tags
-h1 = soup.findAll("h1")
+title = soup.findAll("title")     #Uses findAll method to find specified tags
+h1 = soup.findAll("h1")            
 
 print( "Description: ", desc ,  "\n" , "title: ", title , "\n" , "h1 tag: ", h1 , "\n")
 
