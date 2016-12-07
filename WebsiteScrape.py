@@ -75,7 +75,7 @@ for i in posContent:
 print adjectives
 
 for i in posContent:
-	if i[1] == "NN":    # If the word is tagged as an adjective 
+	if i[1] == "NN":    # If the word is tagged as a noun 
 		#print i                     
 		nouns.append(i[0])  #Append the word to the array
 	for j in i:                        #This extra for loop is due to there being arrays within arrays in the posContent variable
@@ -84,14 +84,13 @@ for i in posContent:
 			nouns.append(j[0])
 print nouns
 
-# with open("POS Words", "a") as f:
-#  	f.write("URL: " + url + "\n" + "Adjectives: ")                      #Writing information to a file
-#  	for adj in adjectives:
-#  		f.write(adj.encode('utf-8') + ", ")
-#  	f.write("\n" + "Nouns: ")
-#  	for n in nouns:
-#  		f.write(n.encode('utf-8') + ", ")
-    	
-# f.close()
+with open("POS Words", "a") as f:
+  	f.write("URL: " + url + "\n" + "Adjectives: ")                      #Writing information to a file
+  	for adj in adjectives:
+  		f.write(adj.encode('utf-8') + ", ")
+  	f.write("\n" + "Nouns: ")
+  	for n in nouns:
+  		f.write(n.encode('utf-8') + ", ")	
+ 	f.close()
 
 #print fdist.most_common(10)
