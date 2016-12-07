@@ -62,11 +62,11 @@ text = '\n'.join(line for line in lines)
 filteredText = filter(text)                       #Filter text for punct,nums and normalize words to lower case
 mytext = nltk.Text(filteredText)                   #Creating an nltk object
 
-# synSincerity = syn("sincerity",2.26)
-# synRugged = (syn("ruggedness",2.26))
-# synSophistic = (syn("sophistication",2.26))     #Getting every synonym possible.ever.
-# synCompetence = (syn("competence",2.26))
-# synExcite = (syn("excitement",2.26))
+synSincerity = syn("sincerity",2.26)
+synRugged = (syn("ruggedness",2.26))
+synSophistic = (syn("sophistication",2.26))     #Getting every synonym possible.ever.
+synCompetence = (syn("competence",2.26))
+synExcite = (syn("excitement",2.26))
 
 
 # #for i in synSincerity:
@@ -82,16 +82,16 @@ mytext = nltk.Text(filteredText)                   #Creating an nltk object
 
 fdist = nltk.FreqDist(filteredText)            #Frequency Distribution
 
-# allSyn = [synSincerity,synRugged, synExcite, synCompetence,synSophistic]
+allSyn = [synSincerity,synRugged, synExcite, synCompetence,synSophistic]
 
-# for i in allSyn:
-#     for j in i:
-#         if fdist[j] != 0:
-#             print "Word:",j ," Frequency: ",fdist[j]
+for i in allSyn:
+    for j in i:
+        if fdist[j] != 0:
+            print "Word:",j ," Frequency: ",fdist[j]
 
-#print (fdist.most_common(10))  
-#fdist.plot(10, cumulative=True)
-#filteredText.dispersion_plot(["sincerity", "ruggedness", "sophistication", "competence", "excitement"])
+print (fdist.most_common(10))  
+fdist.plot(10, cumulative=True)
+filteredText.dispersion_plot(["sincerity", "ruggedness", "sophistication", "competence", "excitement"])
 
 
 

@@ -48,6 +48,6 @@ mytext = nltk.Text(filteredText)             #Make it into an nltk object
 
 fdist = nltk.FreqDist(filteredText)   
 
-#print fdist.most_common(15)        #top 15 most common 
-mytext.dispersion_plot(["daniels", "college"])              #how often certain words appear in the text
-#fdist.plot(15,cumulative = True)
+print fdist.most_common(15)        #top 15 most common 
+#mytext.dispersion_plot(["daniels", "college"])              #how often certain words appear in the text
+fdist.plot(15,cumulative = True)
