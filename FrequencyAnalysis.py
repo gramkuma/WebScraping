@@ -80,7 +80,7 @@ synExcite = (syn("excitement",2.26))
 # # 	allSyn.append(i.lemmas()[0].name())
 
 
-fdist = nltk.FreqDist(filteredText)            #Frequency Distribution
+# fdist = nltk.FreqDist(filteredText)            #Frequency Distribution
 
 allSyn = [synSincerity,synRugged, synExcite, synCompetence,synSophistic]
 
@@ -90,8 +90,8 @@ for i in allSyn:
             print "Word:",j ," Frequency: ",fdist[j]
 
 print (fdist.most_common(10))  
-fdist.plot(10, cumulative=True)
-filteredText.dispersion_plot(["sincerity", "ruggedness", "sophistication", "competence", "excitement"])
+# fdist.plot(10, cumulative=True)
+# filteredText.dispersion_plot(["sincerity", "ruggedness", "sophistication", "competence", "excitement"])
 
 
 

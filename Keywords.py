@@ -7,7 +7,7 @@ from nltk.corpus import wordnet as wn
 from nltk.corpus import stopwords
 from nltk.draw.dispersion import dispersion_plot
 
-# Gets the frequency data and plots dispersion and cumulative frequency plots.
+# Most frequent words
 
 
 def filter(text):
@@ -50,4 +50,4 @@ fdist = nltk.FreqDist(filteredText)
 
 print fdist.most_common(15)        #top 15 most common 
 #mytext.dispersion_plot(["daniels", "college"])              #how often certain words appear in the text
-fdist.plot(15,cumulative = True)
+# fdist.plot(15,cumulative = True)
