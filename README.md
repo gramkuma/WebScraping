@@ -34,4 +34,4 @@ WebsiteScrape.py - Extracts text from a website and trains the Punkt Sentence To
 
 1. Activate your virtualenv and change directories to where you have cloned this repo using the terminal commands **cd** and **ls** to change your current directory and to list the files in your current location respectively.
 
-2. Once you can see the scripts listed above, you can run each script by typing "./*script*"
+2. Once you navigate to the directory that stores the scripts listed above, you can run each script by typing "./*script*" and following the command prompts.
