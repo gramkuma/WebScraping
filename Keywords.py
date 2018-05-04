@@ -5,7 +5,7 @@ import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import wordnet as wn
 from nltk.corpus import stopwords
-from nltk.draw.dispersion import dispersion_plot
+#from nltk.draw.dispersion import dispersion_plot
 
 # Most frequent words
 
